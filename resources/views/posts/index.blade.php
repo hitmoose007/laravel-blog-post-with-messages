@@ -30,6 +30,13 @@
                             <p class="mb-2">
                                 {{ $post->body }}
                             </p>
+                            <div class="flex items-center">
+                                <form action="" method="post" class="mr-1">
+                                    <button type="submit" class="text-blue-500">Like</button>
+                                </form>
+                                <form action="" method="post" class="mr-1">
+                                    <button type="submit" class="text-red-500">Unlike</button>
+                                </form>
                         </div>
                     @endforeach
                     {{$posts->links()}}

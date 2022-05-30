@@ -30,6 +30,14 @@
                             <p class="mb-2">
                                 {{ $post->body }}
                             </p>
+                        </div>
+                        <div>
+                            <form action="{{route('posts',$post)}}" method="post" class="mr-1">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-500">DELETE</button>
+                            </form>
+                        </div>
                             <div class="flex items-center">
                                 @if (!$post->likedBy(auth()->user()))
                                     <form action="{{route('posts.likes',$post->id)}}" method="post" class="mr-1">

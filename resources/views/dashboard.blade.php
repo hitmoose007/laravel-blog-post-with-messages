@@ -12,8 +12,8 @@
                         <div class="flex justify-between w-full">
 
                             <a href ="{{url('my-profile')}}" class="p-3">
-                            <img src="{{$user->pic==""?"https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg":$user->pic}}" alt="avatar" class="rounded-full w-16 h-12 mr-4">
-                            <p>edit</p>
+                            <img src="{{$user->pic==""?"https://thumbs.dreamstime.com/b/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg":$user->pic}}" alt="avatar" class="rounded-full w-20 h-20 mr-4">
+                            <p class="text-red-500">edit</p>
                             </a>
 
                             <div class="ml-2">

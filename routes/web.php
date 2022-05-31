@@ -4,6 +4,7 @@ use App\Events\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\UserPostController;
 use App\Http\Controllers\DashboardController;
@@ -15,6 +16,8 @@ use App\Http\Controllers\Auth\RegisterController;
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware(('auth'));
 
 Route::get('/users/{user}/posts', [UserPostController::class, 'index'])->name('users.posts');
+Route::get('/my-profile',[UserController::class,'index']);
+Route::post('/my-profile/update',[UserController::class,'update']);
 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

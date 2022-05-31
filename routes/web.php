@@ -25,7 +25,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::post('/posts', [PostController::class, 'store']);
-Route::delete('/posts', [PostController::class, 'destroy']);
+Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
 
 
 Route::post('/send-message', function (Request $request) {

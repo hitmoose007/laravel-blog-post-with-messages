@@ -30,9 +30,7 @@
                             <p class="mb-2">
                                 {{ $post->body }}
                             </p>
-                        </div>
-                        <div>
-                            <form action="{{route('posts',$post)}}" method="post" class="mr-1">
+                            <form action="{{route('posts.destroy',$post)}}" method="post" class="mr-1">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="text-red-500">DELETE</button>

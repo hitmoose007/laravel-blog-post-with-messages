@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="flex justify-center">
-        <div class="w-8/12 bg-white p-6 rounded-lg">
+        <div class="w-8/12 bg-gray-100 p-6 rounded-lg">
             <div class="h-screen bg-white-300">
                 <div class="container flex justify-start bg-gray py-20">
 
-                    <div class="p-3 bg-gray rounded-xl max-w-lg hover:shadow">
+                    <div class="p-3 bg-white rounded-xl max-w-lg hover:shadow">
 
 
                         <div class="flex justify-between w-full">
@@ -44,7 +44,8 @@
                     </div>
                     
                 </div>
-            <div class="container flex flex-col justify-center bg-gray-400 py-20">
+                <hr style="color:black;">
+                <div class="container flex flex-col justify-center bg-white p-20 rounded-lg shadow-sm shadow-black">
                 @foreach($posts as $post)
                 <x-post :post="$post"/>
              @endforeach

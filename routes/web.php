@@ -49,5 +49,7 @@ Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->na
 Route::get('/', function () {
     return view('index');
 });
-
+Route::get('/aboutus', function () {
+    return view('about');
+});
 

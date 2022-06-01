@@ -10,9 +10,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body class="bg-gray-200">
+<body class="bg-gray-400">
 
-    <nav class="p-6 bg-white flex justify-between mb-6">
+    <nav class="p-6 bg-gray-600 flex justify-between mb-6 text-white">
 
         <ul class="flex items-center">
 

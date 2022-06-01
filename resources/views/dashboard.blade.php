@@ -44,7 +44,7 @@
                     </div>
                     
                 </div>
-            <div class="container flex flex-col justify-center bg-gray py-20">
+            <div class="container flex flex-col justify-center bg-gray-400 py-20">
                 @foreach($posts as $post)
                 <x-post :post="$post"/>
              @endforeach

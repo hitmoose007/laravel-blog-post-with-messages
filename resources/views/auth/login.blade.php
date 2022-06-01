@@ -2,56 +2,57 @@
 
 @section('content')
     <div class="flex justify-center">
-        <div class="w-4/12 bg-white p-6 rounded-lg">
+        <div class="w-4/12 bg-transparent p-6 rounded-lg">
 
             @if (session('status'))
                 <div class="bg-red-500 p-4 rounded-lg mb-6 text-white text-center">
                     {{ session('status') }}
                 </div>
             @endif
-
             <form action="{{ route('login') }}" method="post">
                 @csrf
-
-
-
-                <div class="mb-4">
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Your email"
-                        class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('email') border-red-500 @enderror"
-                        value="{{ old('email') }}">
-
-                    @error('email')
-                        <div class="text-red-500 mt-2 text-sm">
-                            {{ $message }}
+                <section class="flex justify-center items-center bg-transparent">
+                    <div class="max-w-md w-full bg-gray-900 rounded p-6 space-y-4">
+                        <div class="mb-4">
+                            <p class="text-gray-400">Sign In</p>
+                            <h2 class="text-xl font-bold text-white">Join our community</h2>
                         </div>
-                    @enderror
-                </div>
-
-                <div class="mb-4">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Choose a password"
-                        class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password') border-red-500 @enderror"
-                        value="">
-
-                    @error('password')
-                        <div class="text-red-500 mt-2 text-sm">
-                            {{ $message }}
+                        <div>
+                            <input
+                                class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600"
+                                type="email" name="email" id="email" placeholder="Your email">
+                            @error('email')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
-                    @enderror
-                </div>
-
-                <div class="mb-4">
-                    <div class="flex items-center">
-                        <input type="checkbox" name="remember" id="remember" class="mr-2">
-                        <label for="remember">Remember me</label>
+                        <div>
+                            <input
+                                class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600"
+                                type="password" name="password" id="password" placeholder="Choose a password">
+                            @error('password')
+                                <div class="text-red-500 mt-2 text-sm">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div>
+                            <button type="submit"
+                                class="w-full py-4 bg-blue-600 hover:bg-blue-700 rounded text-sm font-bold text-gray-50 transition duration-200">Sign
+                                In</button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex flex-row items-center">
+                                <input type="checkbox"
+                                    class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                                <label for="comments" class="ml-2 text-sm font-normal text-gray-400">Remember me</label>
+                            </div>
+                            <div>
+                                <a class="text-sm text-blue-600 hover:underline" href="#">Forgot password?</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div>
-                    <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Login</button>
-                </div>
+                </section>
             </form>
-        </div>
-    </div>
-@endsection
+        @endsection

@@ -78,7 +78,7 @@ body{
                 
          <article class="card">
             <header>
-                <h2>Haider Wazir <br> CMS</h2>
+                <h2>Haider Wazir <br> 333657</h2>
             </header>    
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbi7oxLT9x1ZzJyYzlB9KT8UJBRUf5_yKdWg&usqp=CAU" alt="Hot air balloons">
             <div class="content">
@@ -88,7 +88,7 @@ body{
                 
         <article class="card">
             <header>
-                <h2>Moosah Butt <br> CMS</h2>
+                <h2>Moosah Butt <br> 336348</h2>
             </header>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_PKASW1WqNDeuYLfg3FO-0veY829mUVeAVQ&usqp=CAU" alt="Hot air balloons">
             <div class="content">

@@ -46,9 +46,13 @@
                 </div>
                 <hr style="color:black;">
                 <div class="container flex flex-col justify-center bg-white p-20 rounded-lg shadow-sm shadow-black">
+                @if($posts->count() > 0)
                 @foreach($posts as $post)
                 <x-post :post="$post"/>
              @endforeach
+             @else
+                <p>You don't have any posts</p>
+                @endif
             </div>
             </div>
         </div>

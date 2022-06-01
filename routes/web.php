@@ -47,7 +47,7 @@ Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('
 Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes')->middleware(('auth'));
 
 Route::get('/', function () {
-    return view('main');
+    return view('index');
 });
 
 

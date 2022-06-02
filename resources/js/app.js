@@ -1,6 +1,6 @@
 require("./bootstrap");
 
-const messages_el = document.getElementById("messages");
+const messages_el = document.getElementById("messagelistli");
 const username_input = document.getElementById("username");
 const messages_input = document.getElementById("message_input");
 const messages_form = document.getElementById("message_form");
@@ -45,8 +45,8 @@ button.addEventListener("click", function (e) {
 });
 
 
-// console.log(message);
+// console.log(data);
 window.Echo.channel("chat").listen(".message", (e) => {
-    console.log(e);
-   
+    console.log(e.message);
+   messages_el.innerHTML += `<li><span class="font-bold">${e.username}:</span> ${e.message}</li><hr>`;
 });

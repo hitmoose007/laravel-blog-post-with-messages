@@ -10,11 +10,17 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <style>
-    body{
+    body {
         background-image: url("https://img.freepik.com/free-photo/grey-black-texture-concrete_125540-775.jpg?t=st=1654068270~exp=1654068870~hmac=bd635ee012d59d1a8d91615971e9ca9412484184b897c863fb3a24aa840d26fc&w=996");
         background-repeat: no-repeat;
         background-size: cover;
+
     }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
 </style>
 
 <body class="bg-gray-400">
@@ -23,12 +29,15 @@
 
         <ul class="flex items-center">
             @auth
-            <li>
-                <a href="/dashboard" class="p-3">Dashboard</a>
-            </li>
-            <li>
-                <a href ="{{ route('posts') }}" class="p-3">Post</a>
-            </li>
+                <li>
+                    <a href="/dashboard" class="p-3">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/chats" class="p-3">Chats</a>
+                </li>
+                <li>
+                    <a href="{{ route('posts') }}" class="p-3">Post</a>
+                </li>
             @endauth
         </ul>
 

@@ -46,6 +46,10 @@ Route::post('/send-message', function (Request $request) {
 Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes')->middleware(('auth'));
 Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes')->middleware(('auth'));
 
+Route::get('/chats',function(){
+    return view('main');
+})->middleware(('auth'));
+
 Route::get('/', function () {
     return view('index');
 });

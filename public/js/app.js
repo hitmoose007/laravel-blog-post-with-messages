@@ -2164,7 +2164,7 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var messages_el = document.getElementById("messages");
+var messages_el = document.getElementById("messagelistli");
 var username_input = document.getElementById("username");
 var messages_input = document.getElementById("message_input");
 var messages_form = document.getElementById("message_form");
@@ -2199,10 +2199,11 @@ button.addEventListener("click", function (e) {
     }]
   };
   axios(options);
-}); // console.log(message);
+}); // console.log(data);
 
 window.Echo.channel("chat").listen(".message", function (e) {
-  console.log(e);
+  console.log(e.message);
+  messages_el.innerHTML += "<li><span class=\"font-bold\">".concat(e.username, ":</span> ").concat(e.message, "</li><hr>");
 });
 
 /***/ }),
@@ -2235,8 +2236,8 @@ window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: "pusher",
-  key: "",
-  cluster: "mt1",
+  key: "cfb12ff2acd5cf3987d1",
+  cluster: "ap2",
   forceTLS: true
 });
 
